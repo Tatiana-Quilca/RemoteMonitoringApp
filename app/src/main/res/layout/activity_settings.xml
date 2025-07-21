@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header mejorado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"
+            android:padding="20dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Configuración de Recolección"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2E3A59"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Define cuándo y a qué horas realizar las recolecciones"
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="8dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Tarjeta para días de recolección -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:elevation="6dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📅 Días de Recolección"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2E3A59"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Grid de días usando LinearLayouts anidados -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_sunday"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:text="Domingo"
+                            android:textSize="16sp"
+                            android:textColor="#4A5568"
+                            android:padding="8dp" />
+
+                        <CheckBox
+                            android:id="@+id/cb_monday"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:text="Lunes"
+                            android:textSize="16sp"
+                            android:textColor="#4A5568"
+                            android:padding="8dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_tuesday"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:text="Martes"
+                            android:textSize="16sp"
+                            android:textColor="#4A5568"
+                            android:padding="8dp" />
+
+                        <CheckBox
+                            android:id="@+id/cb_wednesday"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:text="Miércoles"
+                            android:textSize="16sp"
+                            android:textColor="#4A5568"
+                            android:padding="8dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_thursday"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:text="Jueves"
+                            android:textSize="16sp"
+                            android:textColor="#4A5568"
+                            android:padding="8dp" />
+
+                        <CheckBox
+                            android:id="@+id/cb_friday"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:text="Viernes"
+                            android:textSize="16sp"
+                            android:textColor="#4A5568"
+                            android:padding="8dp" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cb_saturday"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Sábado"
+                        android:textSize="16sp"
+                        android:textColor="#4A5568"
+                        android:padding="8dp"
+                        android:gravity="start|center_vertical" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta para horarios -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:elevation="6dp"
+            android:radius="16dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🕒 Horario de Recolección"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2E3A59"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Contenedor de horarios -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <!-- Hora de inicio -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#F8F9FA"
+                        android:padding="16dp"
+                        android:layout_marginEnd="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hora de Inicio"
+                            android:textSize="14sp"
+                            android:textColor="#6B7280"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp" />
+
+                        <NumberPicker
+                            android:id="@+id/np_start_hour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp" />
+
+                    </LinearLayout>
+
+                    <!-- Separador visual -->
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="80dp"
+                        android:background="#E5E7EB"
+                        android:layout_gravity="center_vertical" />
+
+                    <!-- Hora de fin -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#F8F9FA"
+                        android:padding="16dp"
+                        android:layout_marginStart="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hora de Fin"
+                            android:textSize="14sp"
+                            android:textColor="#6B7280"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp" />
+
+                        <NumberPicker
+                            android:id="@+id/np_end_hour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Información adicional -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💡 Tip: Selecciona el rango de horas en que realizarás las recolecciones"
+                    android:textSize="12sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="16dp"
+                    android:padding="12dp"
+                    android:background="#E3F2FD" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botones de acción -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="✅ Guardar"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#4CAF50"
+                android:elevation="3dp"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="❌ Cancelar"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#6B7280"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#F3F4F6"
+                android:elevation="2dp"
+                android:padding="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

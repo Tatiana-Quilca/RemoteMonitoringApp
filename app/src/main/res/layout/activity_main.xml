@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f7fa"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header moderno sin drawables -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            android:backgroundTint="#1976D2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sistema de Monitoreo Remoto "
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:letterSpacing="0.02" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Control y seguimiento en tiempo real\n Autor: Tatiana Quilca"
+                    android:textSize="14sp"
+                    android:textColor="#E3F2FD"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta de estado mejorada -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✅"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Estado del Sistema"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#2c3e50" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sistema inicializado"
+                    android:textSize="14sp"
+                    android:textColor="#34495e"
+                    android:background="#f8f9fa"
+                    android:padding="16dp"
+                    android:fontFamily="monospace" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta de recolección de datos GPS mejorada -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🛰️"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recolección de Datos GPS"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#2c3e50" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:background="#e8f5e8"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Habilitar Recolección de Datos"
+                        android:textSize="16sp"
+                        android:textColor="#2c3e50"
+                       />
+
+                    <Switch
+                        android:id="@+id/switch_data_collection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_configure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:text="⚙️ Configurar Días y Horas"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#2196F3"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Última Ubicación GPS:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#2c3e50"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/tv_last_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No hay datos de ubicación disponibles"
+                    android:textSize="12sp"
+                    android:textColor="#34495e"
+                    android:background="#f8f9fa"
+                    android:padding="16dp"
+                    android:fontFamily="monospace"
+                    android:minHeight="80dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta del servidor HTTP mejorada -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🖥️"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Servidor API HTTP"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#2c3e50" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <Button
+                        android:id="@+id/btn_start_server"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="▶️ Iniciar Servidor"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="#4CAF50"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_stop_server"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="⏹️ Detener Servidor"
+                        android:enabled="false"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="#F44336"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_server_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Servidor: No está en ejecución"
+                    android:textSize="12sp"
+                    android:textColor="#34495e"
+                    android:background="#f8f9fa"
+                    android:padding="16dp"
+                    android:fontFamily="monospace"
+                    android:minHeight="100dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta de información del dispositivo mejorada -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📱"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Información del Dispositivo"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#2c3e50" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_device_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cargando información del dispositivo..."
+                    android:textSize="12sp"
+                    android:textColor="#34495e"
+                    android:background="#f8f9fa"
+                    android:padding="16dp"
+                    android:fontFamily="monospace"
+                    android:minHeight="80dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta de autenticación mejorada -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔐"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Autenticación de la API"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#2c3e50" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Token Bearer: token_por_defecto_123456789\n\nAutenticación Básica:\nNombre usuario: admin\nContraseña: admin123\n\nEjemplo cURL:\ncurl -H &quot;Authorization: Bearer token_por_defecto_123456789&quot; http://[IP]:8080/api/sensor_data"
+                    android:textSize="11sp"
+                    android:textColor="#34495e"
+                    android:background="#f8f9fa"
+                    android:padding="16dp"
+                    android:fontFamily="monospace"
+                    android:minHeight="120dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta de instrucciones mejorada -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📖"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Instrucciones"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#2c3e50" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Habilita la recolección de datos GPS usando el interruptor.\n2. Inicia el servidor HTTP para acceder a los puntos finales de la API.\n3. Usa una herramienta como Postman o cURL para consultar:\n   - /api/sensor_data?tiempo_inicio=...&amp;tiempo_fin=...\n   - /api/device_status\n4. Asegúrate de que el dispositivo esté conectado a una red.\n5. Verifica el estado y los registros para solucionar problemas."
+                    android:textSize="12sp"
+                    android:textColor="#34495e"
+                    android:background="#f8f9fa"
+                    android:padding="16dp"
+                    android:fontFamily="monospace"
+                    android:minHeight="140dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Espaciado final -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+</ScrollView>
