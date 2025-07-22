@@ -151,7 +151,7 @@ Response: [
 ## Vista de la APP 
 <img src="https://github.com/user-attachments/assets/e256ed71-e1c1-472c-a7a9-ae55de13ec14" alt="Vista previa de la aplicación" width="150">
 <img src="https://github.com/user-attachments/assets/be0507cc-2de8-464e-8320-e906c41a3f24" alt="Vista previa de la aplicación" width="150">
-<img src="https://github.com/user-attachments/assets/ebca8969-e126-4736-ba8c-69b878152a31" alt="Vista previa de la aplicación" width="150">
+<img src="https://github.com/user-attachments/assets/790ce22c-d27b-4700-bc19-a57a931b4baf" alt="Vista previa de la aplicación" width="150">
 
 
 
