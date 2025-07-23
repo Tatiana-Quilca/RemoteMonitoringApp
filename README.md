@@ -56,7 +56,6 @@ cd RemoteMonitoringApp
 ### 3. Configurar el Proyecto
 1. **Verificar el SDK**: Ir a `File > Project Structure > SDK Location`
 2. **Actualizar dependencias**: En `build.gradle (Module: app)` 
-   ```
 
 ## 🏃‍♂️ Ejecutar el Proyecto
 
@@ -71,8 +70,6 @@ cd RemoteMonitoringApp
 2. **Seleccionar dispositivo**: Recomendado Pixel con API 30+
 3. **Iniciar emulador**
 4. En Android Studio: `Run > Run 'app'`
-
-### Método 3: APK de Distribución
 
 # Generar APK de release
 Build > Generate App Bundles or APKs > Generate APKs
